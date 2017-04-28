@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:SlidingPanelTest" x:Class="SlidingPanelTest.SlidingPanelTestPage" xmlns:DK="clr-namespace:DK.SlidingPanel.Interface;assembly=DK.SlidingPanel.Interface" xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps">
+	<AbsoluteLayout VerticalOptions="FillAndExpand" x:Name="Main">
+		<StackLayout AbsoluteLayout.LayoutBounds="0,0,1,1" AbsoluteLayout.LayoutFlags="All" x:Name="main" BackgroundColor="#FF00FF" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+			<Label Text="Conteudo" />
+		</StackLayout>
+		<StackLayout x:Name="body" AbsoluteLayout.LayoutBounds="1,1,1,1" AbsoluteLayout.LayoutFlags="All"
+			Orientation="Vertical" VerticalOptions="FillAndExpand" Spacing="0">
+			<StackLayout VerticalOptions="End" BackgroundColor="Red">
+				<Label Text="Titulo" />
+				<StackLayout.GestureRecognizers>
+					<TapGestureRecognizer Tapped="Handle_Tapped">
+					</TapGestureRecognizer>
+				</StackLayout.GestureRecognizers>
+			</StackLayout>
+			<StackLayout VerticalOptions="FillAndExpand" BackgroundColor="Blue">
+				<Label Text="Corpo" />
+			</StackLayout>
+		</StackLayout>
+	</AbsoluteLayout>
+</ContentPage>
